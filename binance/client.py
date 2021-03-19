@@ -5691,3 +5691,6 @@ class Client(object):
 
         """
         return self._request_margin_api('get', 'accountSnapshot', True, data=params)
+
+    def cancel_orders(self, **params):
+        return self._delete('openOrders', True, data=params)
